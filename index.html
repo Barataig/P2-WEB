@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Sidebar</title>
+</head>
+
+<body>
+  
+
+    <header>
+        <nav id="sidebar">
+            <div id="sidebar_content">
+                <div id="user">
+                    <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/2275847-avatar-masculino-perfil-icone-de-homem-caucasiano-sorridente-vetor.jpg" id="user_avatar" alt="avatar" >
+                    <p id="user_infos">
+                        <span class="item-description">
+                            Fabrício Dias
+                        </span>
+                        <span class="item-description">
+                            O cara dos 20 empregos 
+                        </span>
+                    </p>
+                </div>
+        
+                <ul id="side_items">
+                    <li class="side-item active">
+                        <a href="#">
+                            <i class="fa-solid fa-house"></i>
+                            <span class="item-description">
+                                Início
+                            </span>
+                        </a>
+                    </li>
+        
+                    <li class="side-item">
+                        <a href="#">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="item-description">
+                                Carrinho
+                            </span>
+                        </a>
+                    </li>
+        
+                    <li class="side-item">
+                        <a href="#">
+                            <i class="fa-solid fa-box"></i>
+                            <span class="item-description">
+                                Pedidos
+                            </span>
+                        </a>
+                    </li>
+        
+                    <li class="side-item">
+                        <a href="#">
+                            <i class="fa-solid fa-gear"></i>
+                            <span class="item-description">
+                                Configurações
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+        
+                <button id="open_btn">
+                    <i id="open_btn_icon" class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+    
+            <div id="logout">
+                <button id="logout_btn">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span class="item-description">
+                        Sair
+                    </span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Título</h1>
+        <div class="row">
+            <div class="column">
+              <img src="https://revistaanamaria.com.br/media/uploads/legacy/2020/01/06/essa-lista-dos-eletronicos-mais-vendidos-da-amazon-vao-facilitar-a-sua-vida-1208116.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+            </div>
+            <div class="column">
+              <img src="https://aventurasnahistoria.uol.com.br/media/uploads/amazon/7eletpres13.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+            </div>
+            <div class="column">
+              <img src="https://cdn.competec.ch/images2/7/2/4/289245427/289245427_xxl3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+            </div>
+            <div class="column">
+              <img src="https://www.clickstore.pt/wp-content/uploads/2020/01/satechi-trio-wireless-charging-pad.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+            </div>
+          </div>
+          
+          <!-- The Modal/Lightbox -->
+          <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+          
+              <div class="mySlides">
+                <div class="numbertext">1 / 4</div>
+                <img src="https://revistaanamaria.com.br/media/uploads/legacy/2020/01/06/essa-lista-dos-eletronicos-mais-vendidos-da-amazon-vao-facilitar-a-sua-vida-1208116.png" style="width:50%">
+              </div>
+          
+              <div class="mySlides">
+                <div class="numbertext">2 / 4</div>
+                <img src="https://aventurasnahistoria.uol.com.br/media/uploads/amazon/7eletpres13.jpg" style="width:50%">
+              </div>
+          
+              <div class="mySlides">
+                <div class="numbertext">3 / 4</div>
+                <img src="https://cdn.competec.ch/images2/7/2/4/289245427/289245427_xxl3.jpg" style="width:50%">
+              </div>
+          
+              <div class="mySlides">
+                <div class="numbertext">4 / 4</div>
+                <img src="https://www.clickstore.pt/wp-content/uploads/2020/01/satechi-trio-wireless-charging-pad.jpg" style="width:50%">
+              </div>
+          
+              <!-- Next/previous controls -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          
+              <!-- Caption text -->
+              <div class="caption-container">
+                <p id="caption"></p>
+              </div>
+          
+              <!-- Thumbnail image controls--> 
+              <div class="column">
+                <img class="demo" src="https://revistaanamaria.com.br/media/uploads/legacy/2020/01/06/essa-lista-dos-eletronicos-mais-vendidos-da-amazon-vao-facilitar-a-sua-vida-1208116.png" onclick="currentSlide(1)" alt="Miband">
+              </div>
+          
+              <div class="column">
+                <img class="demo" src="https://aventurasnahistoria.uol.com.br/media/uploads/amazon/7eletpres13.jpg" onclick="currentSlide(2)" alt="AppleWatch">
+              </div>
+          
+              <div class="column">
+                <img class="demo" src="https://cdn.competec.ch/images2/7/2/4/289245427/289245427_xxl3.jpg" onclick="currentSlide(3)" alt="Headphone-JBL">
+              </div>
+          
+              <div class="column">
+                <img class="demo" src="https://www.clickstore.pt/wp-content/uploads/2020/01/satechi-trio-wireless-charging-pad.jpg" onclick="currentSlide(4)" alt="Wireless-Charger">
+              </div>
+            </div>
+          </div>
+    </main>
+    <script src="scripts.js"></script>
+<footer>
+</footer>
+</body>
+</html>
